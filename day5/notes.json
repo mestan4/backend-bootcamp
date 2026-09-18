@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Node.js fs Module",
+    "content": "Learn how to read and write files asynchronously",
+    "isCompleted": false
+  },
+  {
+    "id": 2,
+    "title": "Kalıcı Not",
+    "content": "Bu not doğrudan notes.json dosyasına yazılacak",
+    "isCompleted": false
+  }
+]
