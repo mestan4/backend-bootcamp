@@ -103,14 +103,14 @@ app.delete('/notes/:id', (req, res) => {
   });
 });
 
+//api endpoint
 app.patch('/notes/:id/complete', (req, res) => {
-  // 1. URL'den gelen id'yi sayıya çeviriyoruz (Senin yazdığın kısım)
   const noteId = parseInt(req.params.id, 10);
 
-  // 2. Notu listede arıyoruz (Senin yazdığın kısım)
+  // notu listede arıyoruz
   const note = notes.find((item) => item.id === noteId);
 
-  // 3. Not bulunamadıysa hemen 404 dönüp fonksiyonu bitiriyoruz (return)
+  // not bulunamadıysa hemen 404 dönüp fonksiyonu bitiriyoruz
   if (!note) {
     return res.status(404).json({
       success: false,
@@ -118,10 +118,10 @@ app.patch('/notes/:id/complete', (req, res) => {
     });
   }
 
-  // 4. Not bulundu! Yeni özelliğini ekliyoruz/güncelliyoruz
+  // Not bulundu! Yeni özelliğini ekliyoruz/güncelliyoruz
   note.isCompleted = true;
 
-  // 5. İstemciye başarı yanıtı dönüyoruz
+  //  başarı yanıtı dönüyoruz
   res.status(200).json({
     success: true,
     message: 'Note marked as completed',

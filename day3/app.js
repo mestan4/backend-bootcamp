@@ -3,13 +3,13 @@ const express = require('express');
 // Initialize the Express application
 const app = express();
 
+app.use(express.json());
+
 // In-memory data store for testing
 const notes = [
   { id: 1, title: 'Learn Node.js basics' },
   { id: 2, title: 'Build an Express API' }
 ];
-
-app.use(express.json());
 
 // Route 1: Welcome message (Root URL)
 // Method: GET, Path: /
